@@ -26,7 +26,8 @@
       "license": {
         "label": "GPL v3"
       }
-    }
+    },
+    "timestamp": "2017-06-13 03:24:09 UTC"
   },
   "software": {
     "base": {
@@ -34,6 +35,7 @@
       "framework": "openjdk7",
       "deployment_type": "web",
       "http_protocol": "http_and_https",
+      "framework_port_override": 8888,
       "memory": {
         "required": 256,
         "recommended": 384
