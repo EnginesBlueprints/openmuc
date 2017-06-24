@@ -27,7 +27,7 @@
         "label": "GPL v3"
       }
     },
-    "timestamp": "2017-06-13 03:24:09 UTC"
+    "timestamp": "2017-06-25T09:51:33+10:00"
   },
   "software": {
     "base": {
@@ -44,7 +44,7 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/bash\r\ncd /home/app/framework\r\nPID_FILE=/home/app/framework/log/openmuc.pid\r\nexport PID_FILE\r\n. /home/trap.sh\r\nbin/openmuc  start -bg \r\n\r\n\r\ntouch /engines/var/run/flags/startup_complete\r\n\r\nwhile test -f  $PID_FILE\r\ndo\r\n sleep 120\r\ndone\r\n\r\nsleep 500\r\n\r\nrm /engines/var/run/flags/startup_complete  \r\n\r\n"
+        "content": "#!/bin/bash\r\ncd /home/app/framework\r\nPID_FILE=/home/app/framework/log/openmuc.pid\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n\r\nbin/openmuc  start -bg \r\n\r\n\r\ntouch /engines/var/run/flags/startup_complete\r\n\r\nwhile test -f  $PID_FILE\r\ndo\r\n sleep 120\r\ndone\r\n\r\nsleep 500\r\n\r\nrm /engines/var/run/flags/startup_complete  \r\nexit\r\n\r\n"
       },
       "install": {
         "language": "sh",
